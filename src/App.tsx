@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect} from "react";
+import { Header } from "./components/main/Header";
+import { Selection } from "./components/main/Selection";
+import { useAppDispatch } from "./store/hooks";
+import { loadFood } from "./store/food/foodApi";
+import { FoodsDisplay } from "./components/main/FoodsDisplay";
 
-function App() {
+export const App = () => {
+  const dispatch = useAppDispatch()
+
+  useEffect(() => {
+    dispatch(loadFood())
+  }, [dispatch])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="m-4 xl:m-20 flex flex-col gap-5 xl:gap-20">
+      <Header />
+
+      <main className="flex flex-col gap-5">
+        <Selection />
+        <FoodsDisplay />
+      </main>
     </div>
   );
-}
-
-export default App;
+};
