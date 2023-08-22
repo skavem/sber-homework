@@ -1,10 +1,10 @@
-import { FoodFilter } from "./FoodFilter";
+import { FoodFilters } from "./FoodFilters";
 import { FoodSortDropdown } from "./FoodSortDropdown";
 
 export const Selection = () => {
   return (
     <div className="flex select-none flex-row justify-between">
-      <FoodFilter />
+      <FoodFilters />
 
       <FoodSortDropdown />
     </div>
