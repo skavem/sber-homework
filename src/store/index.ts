@@ -1,4 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
+
 import foodReducer from "./food/foodReducer";
 
 const store = configureStore({
