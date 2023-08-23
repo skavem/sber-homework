@@ -1,5 +1,13 @@
 # Домашка для Сбера
 
+## Страница деплоится на gh pages
+
+Чтобы не поднимать у себя ничего, деплой на gh pages:
+
+https://skavem.github.io/sber-homework/
+
+[Пайплайн на деплой](/.github/workflows/deploy.yml)
+
 ## Запуск
 
 Можно запустить контейнером:
@@ -16,7 +24,6 @@ nvm use $(Get-Content .nvmrc) // на винде
 nvm use // на Linux
 npm ci
 npm run start
-
 ```
 
 ## Предисловие
